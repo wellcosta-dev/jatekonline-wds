@@ -1,0 +1,4 @@
+export const MERCHANT_RETURN_DAYS = 30;
+export const MERCHANT_STANDARD_SHIPPING_PRICE_HUF = 2390;
+export const MERCHANT_CONTACT_EMAIL = "hello@babyonline.hu";
+export const MERCHANT_CONTACT_PHONE_E164 = "+36202982228";

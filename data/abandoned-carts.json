@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ac-1773355459332",
+    "sessionId": "session-1773355456917-ojnyi3",
+    "items": [
+      {
+        "productId": "prod-0003",
+        "productName": "FreeON babafürdető szett (kád, állvány, pelenkázó lap) - Elefánt (48648)",
+        "price": 54990,
+        "quantity": 1
+      }
+    ],
+    "subtotal": 54990,
+    "totalItems": 1,
+    "status": "ABANDONED",
+    "reminderCount": 0,
+    "createdAt": "2026-03-12T22:44:19.329Z",
+    "lastActivityAt": "2026-03-18T23:03:55.004Z",
+    "updatedAt": "2026-03-18T23:03:55.004Z"
+  },
+  {
+    "id": "ac-1773096298814",
+    "sessionId": "session-1773093491320-i9gw4x",
+    "userEmail": "hello@babyonline.hu",
+    "userId": "user-1773092792476",
+    "items": [
+      {
+        "productId": "prod-0001",
+        "productName": "FreeON univerzális légáteresztő betét babakocsiba, biztonsági gyermekülésbe - Grey (48716)",
+        "price": 6990,
+        "quantity": 1
+      }
+    ],
+    "subtotal": 6990,
+    "totalItems": 1,
+    "status": "ACTIVE",
+    "reminderCount": 1,
+    "lastReminderAt": "2026-03-14T18:13:05.412Z",
+    "createdAt": "2026-03-09T22:44:58.810Z",
+    "lastActivityAt": "2026-03-19T21:18:09.876Z",
+    "updatedAt": "2026-03-19T21:18:09.876Z"
+  },
+  {
+    "id": "ac-1773095121779",
+    "sessionId": "session-1773095106208-n4qtv9",
+    "items": [],
+    "subtotal": 0,
+    "totalItems": 0,
+    "status": "CLEARED",
+    "reminderCount": 0,
+    "createdAt": "2026-03-09T22:25:21.777Z",
+    "lastActivityAt": "2026-03-09T22:29:30.959Z",
+    "updatedAt": "2026-03-09T22:29:30.959Z"
+  }
+]

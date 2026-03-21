@@ -1,0 +1,14 @@
+{
+  "smtpHost": "smtp.rackhost.hu",
+  "smtpPort": 465,
+  "smtpSecure": true,
+  "smtpUser": "hello@babyonline.hu",
+  "smtpPass": "Snowgoons13K.",
+  "fromName": "BabyOnline.hu",
+  "fromEmail": "hello@babyonline.hu",
+  "replyTo": "hello@babyonline.hu",
+  "orderConfirmationEnabled": true,
+  "orderStatusUpdateEnabled": true,
+  "adminNewOrderEnabled": true,
+  "adminNotificationEmail": "hello@babyonline.hu"
+}

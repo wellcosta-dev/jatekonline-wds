@@ -1,0 +1,53 @@
+services:
+  app:
+    container_name: babyonline-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: ${PORT:-3000}
+      HOSTNAME: ${HOSTNAME:-0.0.0.0}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://babyonline.hu}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@babyonline.hu}
+      AUTH_SESSION_SECRET: ${AUTH_SESSION_SECRET:-change-this-session-secret}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://babyonline:babyonline_password@postgres:5432/babyonline?schema=public}
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:-}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      NEXT_PUBLIC_GTM_ID: ${NEXT_PUBLIC_GTM_ID:-}
+      NEXT_PUBLIC_GA_ID: ${NEXT_PUBLIC_GA_ID:-}
+      GLS_API_BASE_URL: ${GLS_API_BASE_URL:-}
+      GLS_API_KEY: ${GLS_API_KEY:-}
+      POSTA_API_BASE_URL: ${POSTA_API_BASE_URL:-}
+      POSTA_API_KEY: ${POSTA_API_KEY:-}
+      BILLINGO_API_BASE_URL: ${BILLINGO_API_BASE_URL:-https://api.billingo.hu/v3}
+      BILLINGO_API_KEY: ${BILLINGO_API_KEY:-}
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    container_name: babyonline-postgres
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-babyonline}
+      POSTGRES_USER: ${POSTGRES_USER:-babyonline}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-babyonline_password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-babyonline} -d ${POSTGRES_DB:-babyonline}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+

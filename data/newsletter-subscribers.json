@@ -1,0 +1,16 @@
+[
+  {
+    "id": "nl-1773497332392",
+    "email": "teszt+hiraudit@pelda.hu",
+    "source": "audit-script",
+    "isActive": true,
+    "createdAt": "2026-03-14T14:08:52.392Z"
+  },
+  {
+    "id": "nl-1773094595521",
+    "email": "kostyalarpad@wellcosta.hu",
+    "source": "homepage-newsletter",
+    "isActive": true,
+    "createdAt": "2026-03-09T22:16:35.521Z"
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "container": {
+    "name": "BabyOnline GA4 Ecommerce",
+    "dataLayerName": "dataLayer",
+    "ga4MeasurementIdEnv": "NEXT_PUBLIC_GA_ID",
+    "gtmContainerIdEnv": "NEXT_PUBLIC_GTM_ID"
+  },
+  "defaults": {
+    "triggerType": "Custom Event",
+    "ga4EventTagNamePattern": "GA4 - Event - {{event_name}}",
+    "triggerNamePattern": "CE - {{event_name}}",
+    "requiredEventParams": [
+      "currency",
+      "value"
+    ],
+    "ecommerceItemsParamName": "items"
+  },
+  "events": [
+    {
+      "event_name": "view_item_list",
+      "trigger_event_name": "view_item_list",
+      "recommended_params": [
+        "item_list_name",
+        "source_path",
+        "items"
+      ],
+      "notes": "Triggered when product list becomes visible."
+    },
+    {
+      "event_name": "select_item",
+      "trigger_event_name": "select_item",
+      "recommended_params": [
+        "item_list_name",
+        "source_path",
+        "items"
+      ],
+      "notes": "Triggered on product card click before navigation."
+    },
+    {
+      "event_name": "view_item",
+      "trigger_event_name": "view_item",
+      "recommended_params": [
+        "currency",
+        "value",
+        "items"
+      ],
+      "notes": "Triggered on product detail page view."
+    },
+    {
+      "event_name": "add_to_cart",
+      "trigger_event_name": "add_to_cart",
+      "recommended_params": [
+        "currency",
+        "value",
+        "items"
+      ],
+      "notes": "Triggered from card and PDP add-to-cart actions."
+    },
+    {
+      "event_name": "view_cart",
+      "trigger_event_name": "view_cart",
+      "recommended_params": [
+        "currency",
+        "value",
+        "coupon",
+        "items"
+      ],
+      "notes": "Triggered once per cart state signature."
+    },
+    {
+      "event_name": "apply_coupon",
+      "trigger_event_name": "apply_coupon",
+      "recommended_params": [
+        "coupon"
+      ],
+      "notes": "Triggered only when coupon is valid and applied."
+    },
+    {
+      "event_name": "begin_checkout",
+      "trigger_event_name": "begin_checkout",
+      "recommended_params": [
+        "currency",
+        "value",
+        "coupon",
+        "items"
+      ],
+      "notes": "Triggered once at checkout flow start."
+    },
+    {
+      "event_name": "add_shipping_info",
+      "trigger_event_name": "add_shipping_info",
+      "recommended_params": [
+        "currency",
+        "value",
+        "coupon",
+        "shipping_tier",
+        "items"
+      ],
+      "notes": "Triggered when moving from shipping step to payment step."
+    },
+    {
+      "event_name": "add_payment_info",
+      "trigger_event_name": "add_payment_info",
+      "recommended_params": [
+        "currency",
+        "value",
+        "coupon",
+        "payment_type",
+        "shipping_tier",
+        "items"
+      ],
+      "notes": "Triggered before order submission with chosen payment type."
+    },
+    {
+      "event_name": "purchase",
+      "trigger_event_name": "purchase",
+      "recommended_params": [
+        "transaction_id",
+        "currency",
+        "value",
+        "shipping",
+        "coupon",
+        "items"
+      ],
+      "notes": "Triggered after successful order creation response."
+    }
+  ],
+  "item_schema": {
+    "item_id": "string",
+    "item_name": "string",
+    "item_category": "string",
+    "price": "number",
+    "quantity": "number",
+    "item_list_name": "string"
+  }
+}

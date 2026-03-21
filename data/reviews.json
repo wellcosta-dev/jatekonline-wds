@@ -1,0 +1,14 @@
+[
+  {
+    "id": "review-1773094626253",
+    "productId": "prod-0017",
+    "userId": "user-1773092792476",
+    "userEmail": "hello@babyonline.hu",
+    "authorName": "Árpi",
+    "rating": 5,
+    "content": "Teszt teszt",
+    "status": "APPROVED",
+    "createdAt": "2026-03-09T22:17:06.253Z",
+    "updatedAt": "2026-03-13T23:54:35.077Z"
+  }
+]

@@ -2,7 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const { parse } = require("csv-parse/sync");
 
-const csvPath = path.join(__dirname, "..", "babyonline_products_export_1.csv");
+const csvArg = process.argv[2];
+if (!csvArg) {
+  console.error("Használat: node scripts/import-ean-supplier-from-csv.js <export.csv>");
+  process.exit(1);
+}
+const csvPath = path.resolve(csvArg);
 const overridesPath = path.join(__dirname, "..", "data", "product-overrides.json");
 
 function clean(value) {

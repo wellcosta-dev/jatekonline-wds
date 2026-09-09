@@ -2,7 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const { parse } = require("csv-parse/sync");
 
-const csvPath = path.join(__dirname, "..", "babyonline_products_export_1.csv");
+const csvArg = process.argv[2];
+if (!csvArg) {
+  console.error("Használat: node scripts/parse-shopify-csv.js <Shopify-export.csv>");
+  process.exit(1);
+}
+const csvPath = path.resolve(csvArg);
 const outputPath = path.join(__dirname, "..", "lib", "product-data.ts");
 
 const csvContent = fs.readFileSync(csvPath, "utf-8");

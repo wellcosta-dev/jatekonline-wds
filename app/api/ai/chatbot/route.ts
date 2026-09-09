@@ -15,10 +15,16 @@ export async function POST(request: NextRequest) {
 
     let response: string;
 
-    if (message.includes("pelenka") || message.includes("pelenkák")) {
-      const pelenkak = getProductsByCategory("pelenkak");
-      const names = pelenkak.slice(0, 3).map((p) => p.name).join(", ");
-      response = `Ajánlom a következő pelenka termékeket: ${names}. Melyik érdekel jobban?`;
+    if (
+      message.includes("lego") ||
+      message.includes("játék") ||
+      message.includes("jatek")
+    ) {
+      const lego = getProductsByCategory("lego");
+      const names = lego.slice(0, 3).map((p) => p.name).join(", ");
+      response = names
+        ? `Íme néhány LEGO / játék ötlet a kínálatból: ${names}. Melyik érdekel jobban?`
+        : `Böngészd a LEGO és további játék kategóriáinkat a /kategoriak/lego oldalon.`;
     } else if (
       message.includes("rendelés") ||
       message.includes("rendeles") ||

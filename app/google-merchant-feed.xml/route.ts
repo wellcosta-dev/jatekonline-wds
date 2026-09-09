@@ -55,8 +55,10 @@ function getGoogleProductCategory(categorySlug: string): string | undefined {
       return "Baby & Toddler > Bathing";
     case "babaszoba":
       return "Baby & Toddler > Nursery";
+    case "lego":
+      return "Toys & Games > Building Toys > LEGO & Building Blocks";
     default:
-      return undefined;
+      return "Toys & Games";
   }
 }
 

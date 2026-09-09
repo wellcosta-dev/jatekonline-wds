@@ -39,7 +39,9 @@ export function NewsletterSignup() {
       <div className="container mx-auto px-4">
         <div
           className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden p-8 md:p-12"
-          style={{ background: "linear-gradient(135deg, #4e0079 0%, #7B2FBE 50%, #0ebbe4 100%)" }}
+          style={{
+            background: "linear-gradient(135deg, #3d8db8 0%, #5ba4cf 45%, #7bb8da 100%)",
+          }}
         >
           {/* Decorative blobs */}
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/5 blur-3xl" />

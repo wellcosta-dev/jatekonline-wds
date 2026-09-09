@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-03-23T22:24:59.020Z",
+  "categoryCount": 235,
+  "productCount": 10701,
+  "skippedLegoDuringListing": "termék URL-ek a listában LEGO szűrve",
+  "note": "Üres kategóriák (termék nélkül) eltávolítva a katalógusból. Kategóriánként mentett checkpoint: data/.regio-scrape-checkpoint.json."
+}

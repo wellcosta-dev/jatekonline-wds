@@ -23,7 +23,7 @@ const STATUS_COLORS: Record<OrderStatus, string> = {
   PENDING: "bg-neutral-pale text-neutral-medium",
   CONFIRMED: "bg-primary-pale text-primary",
   PROCESSING: "bg-primary-pale text-primary",
-  SHIPPED: "bg-secondary/20 text-secondary",
+  SHIPPED: "bg-secondary/25 text-neutral-dark",
   DELIVERED: "bg-green-100 text-green-700",
   CANCELLED: "bg-red-100 text-red-700",
   REFUNDED: "bg-amber-100 text-amber-700",

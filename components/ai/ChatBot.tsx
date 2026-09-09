@@ -8,7 +8,7 @@ import { products, categories } from "@/lib/mock-data";
 import { formatPrice } from "@/lib/utils";
 
 const QUICK_CHIPS = [
-  "Pelenka ajánlás",
+  "LEGO ajánlás",
   "Szállítási infó",
   "Rendelés követése",
 ];
@@ -17,28 +17,26 @@ function getBotResponse(message: string): string {
   const lower = message.toLowerCase().trim();
 
   if (
-    lower.includes("pelenka") ||
-    lower.includes("pelenk") ||
-    lower.includes("ajánlás")
+    lower.includes("lego") ||
+    lower.includes("játék") ||
+    lower.includes("jatek") ||
+    (lower.includes("ajánlás") && !lower.includes("szállít"))
   ) {
-    const pelenkaCategory = categories.find((c) => c.slug === "pelenkak");
-    const pelenkaProducts = products
-      .filter(
-        (p) =>
-          p.categoryId === pelenkaCategory?.id ||
-          p.tags.some((t) => t.toLowerCase().includes("pelenka"))
-      )
-      .slice(0, 2);
-    if (pelenkaProducts.length === 0) {
-      return "Sajnos jelenleg nincs pelenka a kínálatunkban. Kérjük, nézz vissza később!";
+    const legoCategory = categories.find((c) => c.slug === "lego");
+    const legoProducts = products
+      .filter((p) => p.categoryId === legoCategory?.id)
+      .slice(0, 3);
+    if (legoProducts.length === 0) {
+      return "Jelenleg nincs LEGO a mintakészletben — nézd meg a többi kategóriát a /kategoriak oldalon.";
     }
-    const list = pelenkaProducts
-      .map(
-        (p) =>
-          `• ${p.name} - ${formatPrice(p.salePrice ?? p.price)} (${p.shortDesc ?? ""})`
-      )
+    const list = legoProducts
+      .map((p) => {
+        const hint = (p.shortDesc ?? "").trim();
+        const tail = hint ? ` (${hint.slice(0, 80)}${hint.length > 80 ? "…" : ""})` : "";
+        return `• ${p.name} - ${formatPrice(p.salePrice ?? p.price)}${tail}`;
+      })
       .join("\n");
-    return `Íme néhány népszerű pelenka ajánlatunk:\n\n${list}\n\nBöngéssz a pelenkák között: /kategoriak/pelenkak`;
+    return `Íme néhány LEGO ajánlat:\n\n${list}\n\nTovábbiak: /kategoriak/lego`;
   }
 
   if (

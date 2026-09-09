@@ -15,30 +15,28 @@
     "status": "ABANDONED",
     "reminderCount": 0,
     "createdAt": "2026-03-12T22:44:19.329Z",
-    "lastActivityAt": "2026-03-18T23:03:55.004Z",
-    "updatedAt": "2026-03-18T23:03:55.004Z"
+    "lastActivityAt": "2026-03-21T13:49:10.061Z",
+    "updatedAt": "2026-03-21T13:49:10.061Z"
   },
   {
     "id": "ac-1773096298814",
     "sessionId": "session-1773093491320-i9gw4x",
-    "userEmail": "hello@babyonline.hu",
-    "userId": "user-1773092792476",
     "items": [
       {
-        "productId": "prod-0001",
-        "productName": "FreeON univerzális légáteresztő betét babakocsiba, biztonsági gyermekülésbe - Grey (48716)",
-        "price": 6990,
-        "quantity": 1
+        "productId": "prod-0024",
+        "productName": "Távirányítós autó 1:12 Oracle Red Bull Racing RB18",
+        "price": 19995,
+        "quantity": 2
       }
     ],
-    "subtotal": 6990,
-    "totalItems": 1,
+    "subtotal": 39990,
+    "totalItems": 2,
     "status": "ACTIVE",
     "reminderCount": 1,
     "lastReminderAt": "2026-03-14T18:13:05.412Z",
     "createdAt": "2026-03-09T22:44:58.810Z",
-    "lastActivityAt": "2026-03-19T21:18:09.876Z",
-    "updatedAt": "2026-03-19T21:18:09.876Z"
+    "lastActivityAt": "2026-03-31T18:29:18.007Z",
+    "updatedAt": "2026-03-31T18:29:18.007Z"
   },
   {
     "id": "ac-1773095121779",

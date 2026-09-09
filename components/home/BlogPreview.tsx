@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { blogPosts } from "@/lib/mock-data";
 
 const CARD_GRADIENTS = [
-  "linear-gradient(135deg, #4e0079 0%, #7B2FBE 50%, #0ebbe4 100%)",
-  "linear-gradient(135deg, #0ebbe4 0%, #ff65c1 100%)",
-  "linear-gradient(135deg, #ff65c1 0%, #ffcb00 100%)",
+  "linear-gradient(135deg, #3d8db8 0%, #5ba4cf 50%, #7bb8da 100%)",
+  "linear-gradient(135deg, #5ba4cf 0%, #ffd600 100%)",
+  "linear-gradient(135deg, #ffd600 0%, #ffe566 100%)",
 ];
 
 

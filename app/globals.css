@@ -11,16 +11,20 @@
 }
 
 @theme {
-  --color-primary: #4e0079;
-  --color-primary-light: #7B2FBE;
-  --color-primary-pale: #F3E8FF;
-  --color-secondary: #FF6B9D;
-  --color-accent: #ffcb00;
-  --color-brand-cyan: #0ebbe4;
-  --color-brand-pink: #ff65c1;
-  --color-neutral-dark: #1A1A2E;
-  --color-neutral-medium: #6B7280;
-  --color-neutral-pale: #F9FAFB;
+  /* jatekonline.hu — pasztell kék + meleg sárga */
+  --color-primary: #5ba4cf;
+  --color-primary-light: #7bb8da;
+  --color-primary-dark: #3d8db8;
+  --color-primary-pale: #ebf5fb;
+  --color-secondary: #ffd600;
+  --color-secondary-dark: #e6c200;
+  --color-secondary-pale: #fff9e6;
+  --color-accent: #ffd600;
+  --color-brand-cyan: #3d8db8;
+  --color-brand-pink: #f5c542;
+  --color-neutral-dark: #1e5c80;
+  --color-neutral-medium: #5a7a8c;
+  --color-neutral-pale: #f0f7fc;
   --color-success: #10B981;
   --color-error: #EF4444;
   --color-warning: #F59E0B;
@@ -37,7 +41,7 @@
   --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 24px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.06), 0 8px 32px rgba(0, 0, 0, 0.08);
   --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 20px rgba(78, 0, 121, 0.15);
+  --shadow-glow: 0 0 24px rgba(91, 164, 207, 0.35);
 
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-slide-up: slide-up 0.5s ease-out;
@@ -88,15 +92,15 @@
 
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, #4e0079, #7B2FBE);
+    background: linear-gradient(135deg, #5ba4cf, #7bb8da);
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, #4e0079 0%, #1A1A2E 100%);
+    background: linear-gradient(135deg, #3d8db8 0%, #1e5c80 100%);
   }
 
   .gradient-secondary {
-    background: linear-gradient(135deg, #FF6B9D, #ff8fb3);
+    background: linear-gradient(135deg, #ffd600, #ffe566);
   }
 
   .glass {
@@ -112,7 +116,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #4e0079, #7B2FBE);
+    background: linear-gradient(135deg, #5ba4cf, #3d8db8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -188,19 +192,20 @@
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 text-white font-semibold
-           px-6 py-3 transition-all duration-300 hover:opacity-90
+           px-6 py-3 transition-all duration-300
            active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    background-color: var(--color-primary);
     border-radius: var(--radius-button);
     box-shadow: var(--shadow-glow);
   }
   .btn-primary:hover {
-    box-shadow: var(--shadow-glow);
+    background-color: var(--color-primary-light);
+    box-shadow: 0 0 28px rgba(91, 164, 207, 0.4);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-secondary text-white font-semibold
-           px-6 py-3 transition-all duration-300 hover:opacity-90
+    @apply inline-flex items-center justify-center gap-2 bg-secondary text-neutral-dark font-semibold
+           px-6 py-3 transition-all duration-300 hover:brightness-95
            active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
     border-radius: var(--radius-button);
   }

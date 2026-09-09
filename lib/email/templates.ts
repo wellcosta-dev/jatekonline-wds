@@ -104,7 +104,7 @@ function baseTemplate(params: { title: string; intro: string; contentHtml: strin
   <div style="margin:0;padding:24px;background:#f6f8fb;font-family:Inter,Arial,sans-serif;color:#0f172a;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;">
       <tr>
-        <td style="padding:22px 24px;background:linear-gradient(120deg,#009dc7,#0ebbe4);color:#ffffff;">
+        <td style="padding:22px 24px;background:linear-gradient(120deg,#3d8db8,#5ba4cf);color:#ffffff;">
           <div style="font-weight:800;font-size:20px;letter-spacing:-0.02em;">BabyOnline.hu</div>
           <div style="opacity:0.92;margin-top:6px;font-size:13px;">Rendelési értesítő</div>
         </td>

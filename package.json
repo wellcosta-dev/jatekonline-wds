@@ -10,7 +10,12 @@
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
-    "supplier:smoke": "node scripts/smoke-supplier-extraction.js"
+    "supplier:smoke": "node scripts/smoke-supplier-extraction.js",
+    "catalog:regio": "node scripts/generate-regio-catalog.mjs",
+    "catalog:regio-full": "node scripts/scrape-regio-full-catalog.mjs",
+    "partner:sync": "node scripts/sync-partner-regio.mjs",
+    "test:regio-stores": "node --test scripts/regio-stores-parse.test.mjs",
+    "db:clear-catalog": "node scripts/clear-prisma-catalog.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
